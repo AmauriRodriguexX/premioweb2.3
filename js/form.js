@@ -186,13 +186,21 @@ function validarCampo(campo) {
 function habilitarSiguienteCampo(campoActual) {
     const indiceActual = camposOrdenados.indexOf(campoActual);
 
+    // Excepción: si el campo actual es 'estado', habilitar 'municipio' y 'giro'
+    if (campoActual === 'estado') {
+        const municipio = document.getElementById('municipio');
+        const giro = document.getElementById('giro');
+
+        if (municipio) municipio.disabled = false;
+        if (giro) giro.disabled = false;
+        return; // No continuar con lógica normal
+    }
+
     // Si es el último campo, habilitar el botón de continuar
     if (indiceActual === camposOrdenados.length - 1) {
-        // Verificar si todos los campos están validados
         const todosValidados = Object.values(campoValidado).every(valor => valor === true);
 
         if (todosValidados) {
-            // Habilitar botón continuar
             const botonContinuar = document.querySelector('.btn-submit');
             if (botonContinuar) {
                 botonContinuar.classList.remove('btn-disabled');
@@ -202,14 +210,12 @@ function habilitarSiguienteCampo(campoActual) {
         return;
     }
 
-    // Obtener el siguiente campo
+    // Habilitar el siguiente campo en la secuencia
     const siguienteCampo = camposOrdenados[indiceActual + 1];
     const siguienteElemento = document.getElementById(siguienteCampo);
 
-    // Habilitar el siguiente campo si existe
     if (siguienteElemento) {
         siguienteElemento.disabled = false;
-        //siguienteElemento.focus();
     }
 }
 

@@ -92,7 +92,6 @@ body{
 
 .momento{
     display: flex;
-    justify-content: flex-end;
     color:#ffffff;
  }
 
@@ -349,6 +348,9 @@ body{
         font-size: 17px;
         line-height: 30px;
     }
+    .facil-text br{
+        display: none;
+    }
     .rotators{
         margin: 0;
     }
@@ -369,6 +371,7 @@ body{
     }
     .video{
         height: 80vh;
+        padding: 0 20px !important;
     }
     .video video{
         width: 100% !important;
@@ -423,3 +426,13 @@ body{
         margin-bottom: 140px !important;
     }
 }
+
+
+@media (max-width: 760px) {
+  .rotate-slick .inner {
+    width: auto !important;
+    max-width: 200px;
+    overflow: visible;
+  }
+}
+

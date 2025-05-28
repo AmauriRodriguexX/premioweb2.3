@@ -5,14 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premio Emprendedores 2025 para personas emprendedoras</title>
     <meta name="description" content="Historias inspiradoras de personas emprendedoras que han convertido sus ideas en negocios exitosos con el apoyo de Compartamos. Premio Emprendedores 2025.">
-
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link href="/css/styles.css" rel="stylesheet">
-    <link href="/css/forms.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
-
-    <script src="/js/dataLayer.js"></script>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="../css/premio.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="../css/forms.css" rel="stylesheet">
+    <script src="../js/dataLayer.js"></script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -23,12 +20,13 @@
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="ns" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXVLSK6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <header class="navbar bd-navbar">
     <nav class="container-xxl bd-gutter">
         <a class="navbar-brand" href="https://www.compartamos.com.mx/compartamos" target="_blank">
-            <img src="/images/logo-color.svg" alt="Logo" height="40" class="d-inline-block align-text-top">
+            <img src="../images/logo-color.png" alt="Logo" height="40" class="d-inline-block align-text-top">
         </a>
     </nav>
 </header>
@@ -38,19 +36,20 @@
             <div class="container custom-container">
                 <div class="row">
                     <div class="col-12">
-                        <a href="/paso1/" class="btn back-button"><img src="/images/back-arrow.svg"/> Regresar</a>
+                        <a href="../paso1/" class="btn back-button"><img src="../images/back-arrow.png"/> Regresar</a>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-sm-12 col-md-6 text-center line-separator">
                         <h2 class="form-title">Datos del colaborador</h2>
-                        <img src="/images/step2.svg">
+                        <img src="../images/step2.png" width="320">
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-sm-12 col-md-6 text-desc">
-                        <span>Ahora, cuéntanos quién es la persona nominada detrás de esta historia.</span><br>
-                        <span class="sub-text"><i class="bi bi-info-circle-fill"></i> Campos con (*) son obligatorios.</span>
+                        <br>
+                        <span class="sub-text"><img src="../images/icon-info.png" alt="info" width="16" height="16"
+                                    style="margin-right: 8px; vertical-align: middle;">Campos con (*) son obligatorios.</span>
                     </div>
                 </div>
                 <form id="step2Form">
@@ -58,14 +57,16 @@
                         <div class="col-sm-6 col-md-3">
                             <div class="input-container">
                                 <label for="nombre2" class="form-label">Nombre(s)*</label>
-                                <input type="text" name="nombre2" class="form-control" id="nombre2" placeholder="Ingrese nombre del nominado" required>
+                                <input type="text" name="nombre2" class="form-control" id="nombre2"
+                                    placeholder="Ingrese nombre del nominado" required>
                                 <div class="campo-status"></div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-3">
                             <div class="input-container campo-pendiente">
                                 <label for="apellidos2" class="form-label">Apellidos*</label>
-                                <input type="text" name="apellidos2" class="form-control" id="apellidos2" placeholder="Ingrese apellidos del nominado" required>
+                                <input type="text" name="apellidos2" class="form-control" id="apellidos2"
+                                    placeholder="Ingrese apellidos del nominado" required>
                                 <div class="campo-status"></div>
                             </div>
                         </div>
@@ -74,24 +75,32 @@
                         <div class="col-sm-6 col-md-3">
                             <div class="input-container campo-pendiente">
                                 <label for="celular2" class="form-label">Teléfono celular*</label>
-                                <input type="text" name="celular2" class="form-control" id="celular2" placeholder="Ingrese 10 dígitos" required>
+                                <input type="text" name="celular2" class="form-control" id="celular2" placeholder="Ingrese 10 dígitos"
+                                    required>
                                 <div class="campo-status"></div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-3">
                             <div class="input-container campo-pendiente">
                                 <label for="justificacion" class="form-label">Justificación de la nominación*</label>
-                                <textarea class="form-control" id="justificacion" rows="3" placeholder="¿Qué te inspira de su historia?" required></textarea>
+                                <textarea class="form-control" id="justificacion" rows="3" placeholder="¿Qué te inspira de su historia?"
+                                    required></textarea>
                                 <div class="character-counter small text-muted mt-1">0 caracteres</div>
                                 <div class="campo-status"></div>
                             </div>
                         </div>
                     </div>
                     <div class="row justify-content-center mt-5">
-                        <div class="col-sm-6 text-center">
-                            <button type="submit" class="btn btn-submit btn-disabled bt-form-step2" disabled>Continuar <i class="bi bi-arrow-right"></i></button>
+                        <div class="col-sm-6 text-center d-flex justify-content-center align-items-center">
+                            <button type="submit"
+                                class="btn btn-submit btn-disabled bt-form-step2 d-flex justify-content-center align-items-center"
+                                disabled>
+                                Continuar
+                                <span class="material-symbols-outlined" style="font-size: 24px; margin-left: 6px;">arrow_forward</span>
+                            </button>
                         </div>
                     </div>
+                
                 </form>
             </div>
         </div>
@@ -103,19 +112,19 @@
             <div class="col-md-6 col-sm-12 content-logo-pie">
                 <div class="logo-pie">
                     <a href="https://www.compartamos.com.mx/compartamos" target="_blank">
-                        <img src="/images/logo-color.svg">
+                        <img src="../images/logo-color.png" width="150">
                     </a>
                 </div>
                 <div class="logo-data">
-                    <img src="/images/data-empresa.svg">
+                    <img src="../images/data-empresa.png">
                     <span>© 2025 Gentera S.A.B</span>
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 content-social-page">
-                <a class="social-bt" href="https://www.facebook.com/CompartamosBanco" target="_blank"><img src="/images/social/Facebook.svg"></a>
-                <a class="social-bt" href="https://www.instagram.com/compartamosbancomx/" target="_blank"><img src="/images/social/Instagram.svg"></a>
-                <a class="social-bt" href="https://www.youtube.com/user/compartamosbanco" target="_blank"><img src="/images/social/YouTube.svg"></a>
-                <a class="social-bt" href="https://www.tiktok.com/@compartamosbancomx" target="_blank"><img src="/images/social/TikTok.svg"></a>
+                <a class="social-bt" href="https://www.facebook.com/CompartamosBanco" target="_blank"><img src="../images/social/fb.png" width="24"></a>
+                <a class="social-bt" href="https://www.instagram.com/compartamosbancomx/" target="_blank"><img src="../images/social/ig.png" width="24"></a>
+                <a class="social-bt" href="https://www.youtube.com/user/compartamosbanco" target="_blank"><img src="../images/social/yt.png" width="24"></a>
+                <a class="social-bt" href="https://www.tiktok.com/@compartamosbancomx" target="_blank"><img src="../images/social/tk.png" width="24"></a>
             </div>
         </div>
         <div class="row">
@@ -145,8 +154,8 @@
     </div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/js/form-step-2.js"></script>
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/premio.bundle.min.js"></script>
+<script src="../js/form-step-2.js"></script>
 </body>
 </html>

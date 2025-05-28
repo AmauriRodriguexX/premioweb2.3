@@ -86,4 +86,21 @@ $(document).ready(function(){
         });
     }
 
+    document.querySelectorAll('.flip-card').forEach(card => {
+        const eventType = 'ontouchstart' in window ? 'touchstart' : 'click';
+
+        card.addEventListener(eventType, function(e) {
+            e.preventDefault(); // Prevent default touch behavior
+            this.classList.toggle('flipped');
+
+            // Remove focus to ensure next interaction works
+            this.blur();
+        });
+
+        card.addEventListener('blur', function() {
+            // Handle focus out - maybe flip back or do nothing
+            // this.classList.remove('flipped'); // if you want to flip back
+        });
+    });
+
 })

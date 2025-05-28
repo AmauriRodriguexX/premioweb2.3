@@ -171,25 +171,55 @@ $(document).ready(function(){
     );
 
     if (window.innerWidth < 760) {
-        $('.winners').slick({
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: false,
-            centerMode: true,
-            centerPadding: '20px',
-            responsice:[
-                {
-                    breakpoint: 370,
-                    settings: {
-                        arrows: false,
-                        slidesToShow: 1,
-                        centerPadding: '100px',
-                    }
+    $('.winners').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        centerMode: true,
+        centerPadding: '20px',
+        autoplay: true,
+        autoplaySpeed: 0,
+        cssEase: 'linear',
+        centerMode: false,       // Esto asegura que empiece en el primer slide
+        speed: 3000,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 370,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    centerPadding: '100px',
                 }
-            ]
-          });
+            }
+        ]
+    });
+
+    let isPaused = false;
+    let slickInstance = $('.winners');
+
+    const toggleBtn = document.getElementById('sliderToggle');
+    const toggleIcon = document.getElementById('sliderToggleIcon');
+
+    if (toggleBtn && toggleIcon) {
+        toggleBtn.addEventListener('click', function () {
+            if (isPaused) {
+                slickInstance.slick('slickPlay');
+                toggleIcon.src = 'images/icon-pause.png';
+                toggleIcon.alt = 'Pausar';
+            } else {
+                slickInstance.slick('slickPause');
+                toggleIcon.src = 'images/icon-play.png';
+                toggleIcon.alt = 'Reproducir';
+            }
+
+            isPaused = !isPaused;
+        });
     }
+}
+
+
     if (typeof GLightbox !== 'undefined' && GLightbox !== null) {
         const lightbox = GLightbox({selector: '.glightbox'});
 

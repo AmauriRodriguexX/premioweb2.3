@@ -1,6 +1,7 @@
 /**
  * Función para manejar la carga de archivos multimedia
  * Valida los formatos y tamaños de archivos permitidos
+ * Incluye funcionalidad para eliminar archivos seleccionados
  */
 function manejarCargaArchivos() {
     // Referencias a elementos del DOM
@@ -15,6 +16,10 @@ function manejarCargaArchivos() {
     const errorVideoMsg = document.getElementById('errorVideo');
     const errorFotoMsg = document.getElementById('errorFoto');
     const errorCheckboxMsg = document.getElementById('errorCheckbox');
+
+    // Referencias a los botones de eliminar
+    const btnEliminarVideo = document.getElementById('btnEliminarVideo');
+    const btnEliminarFoto = document.getElementById('btnEliminarFoto');
 
     // Variables para seguimiento de archivos válidos
     let videoValido = false;
@@ -34,6 +39,55 @@ function manejarCargaArchivos() {
         }
     }
 
+    // Función para limpiar video
+    function limpiarVideo() {
+        videoInput.value = '';
+        videoPreview.src = '';
+        videoPreview.style.display = 'none';
+        videoPlaceholder.style.display = 'flex';
+        btnEliminarVideo.style.display = 'none';
+        errorVideoMsg.textContent = '';
+        videoValido = false;
+        verificarEstadoBotonEnviar();
+
+        // Liberar URL del objeto para evitar memory leaks
+        if (videoPreview.src) {
+            URL.revokeObjectURL(videoPreview.src);
+        }
+    }
+
+    // Función para limpiar foto
+    function limpiarFoto() {
+        fotoInput.value = '';
+        fotoPreview.src = '';
+        fotoPreview.style.display = 'none';
+        fotoPlaceholder.style.display = 'flex';
+        btnEliminarFoto.style.display = 'none';
+        errorFotoMsg.textContent = '';
+        fotoValida = false;
+        verificarEstadoBotonEnviar();
+
+        // Liberar URL del objeto para evitar memory leaks
+        if (fotoPreview.src) {
+            URL.revokeObjectURL(fotoPreview.src);
+        }
+    }
+
+    // Event listeners para botones de eliminar
+    if (btnEliminarVideo) {
+        btnEliminarVideo.addEventListener('click', function(e) {
+            e.preventDefault();
+            limpiarVideo();
+        });
+    }
+
+    if (btnEliminarFoto) {
+        btnEliminarFoto.addEventListener('click', function(e) {
+            e.preventDefault();
+            limpiarFoto();
+        });
+    }
+
     // Validar video
     videoInput.addEventListener('change', function(e) {
         const file = e.target.files[0];
@@ -44,6 +98,7 @@ function manejarCargaArchivos() {
         videoPreview.src = '';
         videoPreview.style.display = 'none';
         videoPlaceholder.style.display = 'flex';
+        btnEliminarVideo.style.display = 'none';
 
         if (file) {
             // Verificar formato
@@ -65,6 +120,7 @@ function manejarCargaArchivos() {
             videoPreview.src = videoURL;
             videoPreview.style.display = 'block';
             videoPlaceholder.style.display = 'none';
+            btnEliminarVideo.style.display = 'block';
 
             videoValido = true;
         }
@@ -82,6 +138,7 @@ function manejarCargaArchivos() {
         fotoPreview.src = '';
         fotoPreview.style.display = 'none';
         fotoPlaceholder.style.display = 'flex';
+        btnEliminarFoto.style.display = 'none';
 
         if (file) {
             // Verificar formato
@@ -103,6 +160,7 @@ function manejarCargaArchivos() {
             fotoPreview.src = imageURL;
             fotoPreview.style.display = 'block';
             fotoPlaceholder.style.display = 'none';
+            btnEliminarFoto.style.display = 'block';
 
             fotoValida = true;
         }
@@ -116,6 +174,33 @@ function manejarCargaArchivos() {
         verificarEstadoBotonEnviar();
     });
 
+    // Manejar envío del formulario
+    const formulario = document.getElementById('uploadForm');
+    if (formulario) {
+        formulario.addEventListener('submit', function(e) {
+
+            let formValido = true;
+
+            // Validar que se haya subido un video
+            if (!videoValido) {
+                errorVideoMsg.textContent = 'Por favor, sube un video válido.';
+                formValido = false;
+            }
+
+            // Validar que se haya subido una foto
+            if (!fotoValida) {
+                errorFotoMsg.textContent = 'Por favor, sube una fotografía válida.';
+                formValido = false;
+            }
+
+            // Validar que se haya aceptado el uso de imagen
+            if (!checkboxAcepto.checked) {
+                errorCheckboxMsg.textContent = 'Debes aceptar el uso de tu imagen.';
+                formValido = false;
+            }
+
+        });
+    }
 }
 
 // Inicializar cuando el DOM esté listo

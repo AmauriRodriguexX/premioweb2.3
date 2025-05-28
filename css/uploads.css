@@ -63,6 +63,7 @@
     margin-top: 15px;
     border-radius: 5px;
     overflow: hidden;
+    position: relative;
 }
 
 .error-message {
@@ -86,7 +87,7 @@
 }
 
 .step.active {
-    color: #C9057D;
+    color: #CE0058;
     font-weight: bold;
 }
 
@@ -94,7 +95,7 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: #C9057D;
+    background-color: #CE0058;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,7 +106,7 @@
 .step-line {
     position: absolute;
     height: 2px;
-    background-color: #C9057D;
+    background-color: #CE0058;
     top: 12px;
     width: 100%;
     left: 50%;
@@ -134,16 +135,16 @@
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    border: 1px solid #C9057D;
+    border: 1px solid #CE0058;
 }
 .form-check-input:checked {
-    background-color: #C9057D;
-    border-color: #C9057D;
+    background-color: #CE0058;
+    border-color: #CE0058;
 }
 
 .btn-primary {
-    background-color: #C9057D;
-    border-color: #C9057D;
+    background-color: #CE0058;
+    border-color: #CE0058;
     padding: 10px 30px;
     font-weight: bold;
     border-radius: 50px;
@@ -155,12 +156,12 @@
 }
 
 .btn-disabled {
-    background-color: #ccc;
-    border-color: #ccc;
+    background-color: #D8DADA;
+    border-color: #D8DADA ;
     padding: 10px 30px;
     font-weight: bold;
     border-radius: 50px;
-    color: #666;
+    color: #949C9F;
 }
 
 #btnEnviar{
@@ -202,7 +203,7 @@
     cursor: pointer;
 }
 .custom-popover .popover-header{
-    color: #C9057D;
+    color: #CE0058;
     background-color: transparent !important;
     border-bottom: unset !important;
     margin-top: 10px;
@@ -214,6 +215,26 @@
 .custom-popover .popover-body ul{
     padding:10px !important;
 }
+
+.delete-btn {
+    width: 40px;         /* o el tamaño que quieras */
+    height: 40px;
+    color: #ffffff;
+    background-color: #CE0058;
+    border-radius: 50%;  /* esto lo hace redondo */
+    border: 1px solid #CE0058;
+    display: none;
+    position: absolute;
+    z-index: 9;
+    right: 0;
+    top: 0;
+    display: flex !important;       /* centra el contenido */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {

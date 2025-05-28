@@ -28,6 +28,11 @@ header.navbar{
     color: #252A2D;
 }
 
+.form-check .form-check-input {
+    float: left;
+    margin-left: -0.2em !important;
+}
+
 .back-form .sub-text{
     font-size: 14px;
     color: #5E6A71;
@@ -82,9 +87,9 @@ header.navbar{
 
 /* Estilo para el botón deshabilitado */
 .btn-disabled {
-    background-color: #e9ecef !important;
-    border-color: #ced4da !important;
-    color: #6c757d !important;
+    background-color: #D8DADA  !important;
+    border-color: #D8DADA  !important;
+    color: #949C9F !important;
     cursor: not-allowed;
     opacity: 0.65;
     font-size: 18px;
