@@ -931,3 +931,19 @@ label {
     justify-content: center;
     align-items: center;
 }
+
+.link-privacidad {
+    color: #CE0058;
+    font-weight: 600;
+}
+
+
+.rotate-slick .slick-slide {
+  display: flex !important;
+  justify-content: flex-start;
+}
+
+.rotate-slick .flip-card {
+  margin-left: auto;
+  margin-right: auto;
+}

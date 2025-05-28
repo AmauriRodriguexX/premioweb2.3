@@ -172,29 +172,31 @@ $(document).ready(function(){
 
     if (window.innerWidth < 760) {
     $('.winners').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        centerMode: true,
-        centerPadding: '20px',
-        autoplay: true,
-        autoplaySpeed: 0,
-        cssEase: 'linear',
-        centerMode: false,       // Esto asegura que empiece en el primer slide
-        speed: 3000,
-        arrows: false,
-        responsive: [
-            {
-                breakpoint: 370,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 1,
-                    centerPadding: '100px',
-                }
+    infinite: true,              // ✅ Loop infinito
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    centerMode: false,           // ✅ Alineado a la izquierda
+    centerPadding: '0px',        // ✅ Sin padding lateral
+    initialSlide: 0,             // ✅ Siempre desde el primer slide
+    autoplay: true,              // ✅ Se mueve solo
+    autoplaySpeed: 0,            // ✅ Sin pausa entre slides
+    speed: 6500,                 // ✅ Scroll continuo lento
+    cssEase: 'linear',           // ✅ Transición fluida constante
+    arrows: false,
+    swipe: false,                // ✅ Desactiva swipe para evitar desplazamiento lento manual
+    responsive: [
+        {
+            breakpoint: 320,
+            settings: {
+                arrows: false,
+                slidesToShow: 1,
+                centerPadding: '0px',
             }
-        ]
-    });
+        }
+    ]
+});
+
 
     let isPaused = false;
     let slickInstance = $('.winners');
