@@ -261,7 +261,7 @@ lottieAnimation = lottie.loadAnimation({
     autoplay: false,
     // We're using a built-in demo animation since we don't have a custom one
     // In a real project, you would replace this with your custom animation path
-    path: '../anim/180.json',
+    path: 'anim/180.json',
     rendererSettings: {
         preserveAspectRatio: 'xMidYMid slice',
         className: 'add-server'
@@ -300,7 +300,7 @@ lottieAnimation.addEventListener('data_failed', () => {
         renderer: 'canvas',
         loop: false,
         autoplay: false,
-        path: '../anim/180.json',
+        path: 'anim/180.json',
         rendererSettings: {
             preserveAspectRatio: 'xMidYMid slice',
             className: 'add-server'
