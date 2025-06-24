@@ -197,8 +197,9 @@ function manejarCargaArchivos() {
             if (!checkboxAcepto.checked) {
                 errorCheckboxMsg.textContent = 'Debes aceptar el uso de tu imagen.';
                 formValido = false;
+            }else{
+                localStorage.setItem('aviso', "si");
             }
-
         });
     }
 }

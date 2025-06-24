@@ -91,39 +91,22 @@
         <div class="row ">
             <div class="col-12">
                 <div class="container custom-container video">
-                    <div class="video-wrapper">
-                  
-                      <!-- VIDEO DESKTOP -->
-                      <video class="background-video video-desktop" width="100%" height="auto" muted loop autoplay
+                    <video class="background-video" width="100%" height="auto" muted loop autoplay
                         poster="images/premio.jpg">
                         <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia.mp4"
-                          type="video/mp4">
+                            type="video/mp4">
                         Your browser does not support HTML5 video.
-                      </video>
-                  
-                      <!-- VIDEO MOBILE -->
-                      <video class="background-video video-mobile" muted loop autoplay playsinline controls
-                        poster="images/premio.jpg">
-                        <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia-4-5.mp4"
-                          type="video/mp4">
-                        Your browser does not support HTML5 video.
-                      </video>
-                  
-                      <!-- Botón + texto -->
-                      <div class="overlay-play">
+                    </video>
+                    <div class="overlay-play">
                         <div class="center-play">
-                          <a href="#" class="button-play" data-bs-toggle="modal" data-bs-target="#myVideo"
-                            data-label="Historia" data-action="01. Inicio"
-                            data-url="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia.mp4">
-                            <img src="images/icon-play.png" width="64" alt="Icono de play en color blanco.">
-                          </a>
-                          <div class="text-play d-none d-md-inline">Conoce la experiencia</div>
+                            <a href="#" class="button-play" data-bs-toggle="modal" data-bs-target="#myVideo"
+                                data-label="Historia" data-action="01. Inicio"
+                                data-url="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia.mp4"><img
+                                    src="images/icon-play.png" width="64" alt="Icono de play en color blanco."></a>
+                            <div class="text-play  d-none d-md-inline">Conoce la experiencia</div>
                         </div>
-                      </div>
-                  
                     </div>
-                  </div>
-                  
+                </div>
             </div>
         </div>
         <div class="row row-mobile">
@@ -374,34 +357,21 @@
 
     <div class="modal fade" id="myVideo" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
-          <div class="modal-content">
-            <div class="modal-header">
-              <img src="images/icon-overlay-close-magenta.png" id="btnCloseModal" type="button"
-                data-bs-dismiss="modal" aria-label="Close" width="32" />
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="images/icon-overlay-close-magenta.png" id="btnCloseModal" type="button"
+                        data-bs-dismiss="modal" aria-label="Close" width="32" />
+                </div>
+                <div class="modal-body">
+                    <video id="modal-video" autoplay muted controls poster="images/premio.jpg" height="100%">
+                        <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia.mp4"
+                            type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
             </div>
-            <div class="modal-body">
-      
-              <!-- VIDEO DESKTOP -->
-              <video id="modal-video-desktop" class="video-desktop" autoplay muted controls playsinline
-                poster="images/premio.jpg">
-                <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia.mp4"
-                  type="video/mp4">
-                Your browser does not support HTML5 video.
-              </video>
-      
-              <!-- VIDEO MOBILE -->
-              <video id="modal-video-mobile" class="video-mobile" autoplay muted controls playsinline
-                poster="images/premio.jpg">
-                <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia-4-5.mp4"
-                  type="video/mp4">
-                Your browser does not support HTML5 video.
-              </video>
-      
-            </div>
-          </div>
         </div>
-      </div>
-      
+    </div>
     <div>
         <a href="images/gallery/galeria-1.jpg" class="glightbox"
             data-alt="Escenario del Premio Emprendedores 2024 con asistentes atentos." data-gallery="gallery1"
@@ -447,22 +417,21 @@
                         <br>
                         <br>
                         <p class="aviso-privacidad-text ">Aviso de Privacidad</p>
-                        <p>Banco Compartamos, S.A., Institución de Banca Múltiple subsidiaria de GENTERA S.A.B. de C.V,
-                            con domicilio en Insurgentes Sur número 1458 piso 5, Colonia Actipan, Alcaldía Benito
-                            Juárez, C.P. 03230, México, Ciudad de México, es el responsable del tratamiento y protección
-                            de sus datos personales recabados por este medio, categorizados como: i) Identificación y
-                            Contacto y ii) Patrimonio y los utilizará para las siguientes finalidades: i) Identificarlo
-                            y corroborar su identidad; ii) Integrar y actualizar su expediente; iii) Prestar,
-                            administrar, operar y dar seguimiento a los servicios y productos que solicitó o contrató
-                            con nosotros; iv) Invitarlo a participar en nuestros eventos, campañas, concursos o sorteos
-                            y en caso de resultar ganador, contactarlo para la entrega del premio y v) Fines de uso de
-                            imagen en medios publicitarios videos/fotografía y publicaciones en cualquier otro medio de
-                            comunicación. Para limitar el uso o divulgación de sus datos personales puede inscribirse en
-                            nuestro listado de exclusión denominado "Exclusión de Promoción y Publicidad”, para más
-                            información y/o para ejercer sus Derechos ARCO usted podrá consultar el Aviso de Privacidad
-                            Integral para Clientes en el sitio web <a href="https://www.compartamos.com.mx/compartamos"
-                                class="link-privacidad" target="_blank"
-                                rel="noopener noreferrer">www.compartamos.com.mx</a> en la sección Avisos Privacidad.
+                        <p>Banco Compartamos, S.A., Institución de Banca Múltiple, subsidiaria de GENTERA
+                            S.A.B. de C.V, con domicilio en Insurgentes Sur número 1458 piso 5, Colonia Actipan,
+                            Alcaldía Benito Juárez, C.P. 03230, México, Ciudad de México, es el responsable del
+                            tratamiento y protección de los datos personales y datos personales sensibles de usted
+                            y/o de sus asegurados y/o familiares asegurados y/o beneficiarios, categorizados como:
+                            i) Identificación y Contacto y ii) Patrimonio, recabados a través de este medio y los
+                            utilizará para las siguientes finalidades: i) Identificarlo y corroborar su identidad; ii)
+                            Integrar y actualizar su expediente y iii) Prestar, administrar, operar y dar seguimiento a
+                            los servicios y productos que solicitó o contrató con nosotros. Para limitar el uso o
+                            divulgación de sus datos personales puede inscribirse en nuestro listado de exclusión
+                            denominado "Exclusión de Promoción y Publicidad”, para más información y/o para
+                            ejercer sus Derechos ARCO usted podrá consultar el Aviso de Privacidad Integral para
+                            Clientes en el sitio web <a href="https://www.compartamos.com.mx/compartamos"
+                                target="_blank" rel="noreferrer noopener" class="link-privacidad">
+                                www.compartamos.com.mx </a> en la sección Avisos Privacidad.
                         </p>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="checkDefault">
